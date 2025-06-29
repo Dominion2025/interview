@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Multi-Section Form</title>
+	<link rel="stylesheet" href="styles.css" />
+	<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+	<script type="module" defer src="app.js"></script>
+</head>
+
+<body>
+	<main class="container">
+		<form id="multiForm">
+			<!-- Section 1 -->
+			<section class="form-section active" id="section-1">
+				<h2>Personal Information</h2>
+				<p>First Name</p>
+				<input type="text" name="firstName" required />
+
+				<p>Last Name</p>
+				<input type="text" name="lastName" required />
+
+				<p>Preferred Name (optional)</p>
+				<input type="text" name="prefName" />
+
+				<p>Email</p>
+				<input type="text" name="email" required />
+
+				<p>Phone Number</p>
+				<input type="text" name="phone" required />
+
+				<p>Current Location (City, State/Country)</p>
+				<input type="text" name="location" required />
+
+				<p>LinkedIn Profile URL (optional)</p>
+				<input type="text" name="linkedin" />
+
+				<p>Are you a U.S. Citizen or Permanent Resident?</p>
+				<label><input type="radio" name="citizenship" value="Yes" required /> Yes</label>
+				<label><input type="radio" name="citizenship" value="No" /> No</label>
+				<label><input type="radio" name="citizenship" value="Prefer not to answer" /> Prefer not to answer</label>
+			</section>
+
+			<!-- Section 2 -->
+			<section class="form-section" id="section-2">
+				<h2>Education and Background</h2>
+				<p>Current Educational Status</p>
+				<select name="education" required>
+					<option value="">Select Education Level</option>
+					<option value="High School">High School</option>
+					<option value="Undergraduate Student">Undergraduate Student</option>
+					<option value="Graduate Student">Graduate Student (Master's or PhD)</option>
+					<option value="Recent Graduate">Recent Graduate (within last 2 years)</option>
+					<option value="Professional / Industry">Professional / Industry</option>
+					<option value="Other" id="education-other-radio">Other</option>
+				</select>
+				<input type="text" name="educationOther" id="education-other-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+
+				<p>School or University Name</p>
+				<input type="text" name="school" required />
+
+				<p>Major/Field of Study</p>
+				<input type="text" name="major" required />
+
+				<p>Graduation Date (MM/YYYY)</p>
+				<input type="text" name="gradDate" required />
+
+				<p>Cumulative GPA (optional)</p>
+				<input type="text" name="gpa" />
+
+				<p>Do you have any technical certifications? (e.g., Security+, Azure, AWS, CISSP)</p>
+				<label><input type="radio" name="certifications" value="Yes" id="certifications-yes-radio" required /> Yes</label>
+				<input type="text" name="certificationsYes" id="certifications-yes-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+				<label><input type="radio" name="certifications" value="No" required /> No</label>
+			</section>
+
+			<!-- Section 3 -->
+			<section class="form-section" id="section-3">
+				<h2>Career Interests</h2>
+				<p>What are you most interested in exploring with BAMSEC at IYC 2025? (Check all that apply)</p>
+				<label><input type="checkbox" name="careerInterests" value="Resume Review / Feedback" /> Resume Review / Feedback</label>
+				<label><input type="checkbox" name="careerInterests" value="1:1 Mentorship / Career Coaching" /> 1:1 Mentorship / Career Coaching</label>
+				<label><input type="checkbox" name="careerInterests" value="Internship Opportunities" /> Internship Opportunities</label>
+				<label><input type="checkbox" name="careerInterests" value="Full-Time Opportunities" /> Full-Time Opportunities</label>
+				<label><input type="checkbox" name="careerInterests" value="Onsite Interview" /> Onsite Interview</label>
+				<label><input type="checkbox" name="careerInterests" value="Networking with Security Professionals" /> Networking with Security Professionals</label>
+				<label><input type="checkbox" name="careerInterests" value="Learning about Microsoft Security Teams" /> Learning about Microsoft Security Teams</label>
+				<label><input type="checkbox" name="careerInterests" value="Other" id="career-interests-other-check" /> Other</label>
+				<input type="text" name="careerInterestsOther" id="career-interests-other-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+
+				<p>What security-related roles are you most interested in? (Select all that apply)</p>
+				<label><input type="checkbox" name="securityInterests" value="Security Software Engineering / Feedback" /> Security Software Engineering / Feedback</label>
+				<label><input type="checkbox" name="securityInterests" value="Security Program Management" /> Security Program Management</label>
+				<label><input type="checkbox" name="securityInterests" value="Software Engineering" /> Software Engineering</label>
+				<label><input type="checkbox" name="securityInterests" value="Data Science / AI / Machine Learning" /> Data Science / AI / Machine Learning</label>
+				<label><input type="checkbox" name="securityInterests" value="Product Management" /> Product Management</label>
+				<label><input type="checkbox" name="securityInterests" value="UX / Product Design" /> UX / Product Design</label>
+				<label><input type="checkbox" name="securityInterests" value="Program / Project Management" /> Program / Project Management</label>
+				<label><input type="checkbox" name="securityInterests" value="Research (e.g., Microsoft Research)" /> Research (e.g., Microsoft Research)</label>
+				<label><input type="checkbox" name="securityInterests" value="Sales, Marketing, or Customer Success" /> Sales, Marketing, or Customer Success</label>
+				<label><input type="checkbox" name="securityInterests" value="Incident Response & Detection" /> Incident Response & Detection</label>
+				<label><input type="checkbox" name="securityInterests" value="Cloud/Infrastructure Security" /> Cloud/Infrastructure Security</label>
+				<label><input type="checkbox" name="securityInterests" value="Red Team / Pen Testing" /> Red Team / Pen Testing</label>
+				<label><input type="checkbox" name="securityInterests" value="Governance, Risk, and Compliance (GRC)" /> Governance, Risk, and Compliance (GRC)</label>
+				<label><input type="checkbox" name="securityInterests" value="Data & AI Security" /> Data & AI Security</label>
+				<label><input type="checkbox" name="securityInterests" value="Other" id="security-interests-other-check" /> Other</label>
+				<input type="text" name="securityInterestsOther" id="security-interests-other-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+				
+				<p>Have you previously applied to Microsoft?</p>
+				<label><input type="radio" name="msft" value="Yes" id="msft-yes-radio" required /> Yes</label>
+				<input type="text" name="msftYes" id="msft-yes-input" placeholder="Please specify role and year" style="display:none; margin-left:10px;" />
+				<label><input type="radio" name="msft" value="No" required /> No</label>
+
+				
+				<p>Are you currently open to relocation?</p>
+				<label><input type="radio" name="relocation" value="Yes" required /> Yes</label>
+				<label><input type="radio" name="relocation" value="No" /> No</label>
+				<label><input type="radio" name="relocation" value="Maybe / Depends on the opportunity" /> Maybe / Depends on the opportunity</label>
+			</section>
+
+			<!-- Section 4 -->
+			<section class="form-section" id="section-4">
+				<h2>Skills & Projects</h2>
+				<p>List 2-3 technical skills or tools you're most confident in.</p>
+				<label><input type="text" name="skills" required /></label>
+
+				
+				<p>Briefly describe a project, internship, or experience you're proud of: (Max 150 words)</p>
+				<textarea name="projectDescription" id="projectDescription" required rows="5" maxlength="1200" placeholder="Max 150 words"></textarea>
+				<small id="word-count-msg" style="display:block; margin-bottom:10px;"></small>
+
+				<p>Link to Resume (PDF, Google Drive, or OneDrive URL): (Optional but highly encouraged)</p>
+				<label><input type="text" name="resumeLink" /></label>
+			</section>
+
+			<!-- Section 5 -->
+			<section class="form-section" id="section-5">
+				<h2>Availability</h2>
+				<p>Which day(s) of IYC 2025 are you available to meet with BAMSEC? (Check all that apply)</p>
+				<label><input type="checkbox" name="availability" value="Thursday" /> Thursday</label>
+				<label><input type="checkbox" name="availability" value="Friday" /> Friday</label>
+				<label><input type="checkbox" name="availability" value="Saturday" /> Saturday</label>
+				<label><input type="checkbox" name="availability" value="Sunday" /> Sunday</label>
+
+				<p>Would you like to be considered for a same-day onsite interview with Microsoft during the convention?</p>
+				<label><input type="radio" name="interview" value="Yes" required /> Yes</label>
+				<label><input type="radio" name="interview" value="No" /> No</label>
+				<label><input type="radio" name="interview" value="Maybe (I need more info)" /> Maybe (I need more info)</label>
+			</section>
+
+			<!-- Section 6 -->
+			<section class="form-section" id="section-6">
+				<h2>Final Thoughts</h2>
+				<p>What do you hope to get out of your interaction with BAMSEC at IYC 2025? (Optional, Max 100 words)</p>
+				<textarea name="finalThoughts" id="finalThoughts" rows="5" maxlength="100" placeholder="Max 100 words"></textarea>
+				<small id="word-count-msg-thoughts" style="display:block; margin-bottom:10px;"></small>
+
+				<p>Any additional information we should know about you? (Optional)</p>
+				<label><input type="text" name="additionalInfo" /></label>
+
+				<button type="submit" class="submit">Submit</button>
+			</section>
+		</form>
+		<!-- <div id="confirmation" class="hidden">Form submitted successfully!</div> -->
+	</main>
+</body>
+
+</html>

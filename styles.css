@@ -1,0 +1,63 @@
+body {
+	font-family: sans-serif;
+	background: #f3f4f6;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 600px;
+	margin: 3rem auto;
+	background: #fff;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+button {
+	width: 100%;
+	padding: 0.75rem;
+	margin: 0.5rem 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	background: #2563eb;
+	color: white;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #1e40af;
+}
+
+/* .form-section {
+	display: none;
+} */
+
+.form-section.active {
+	display: block;
+}
+
+#confirmation {
+	text-align: center;
+	margin-top: 1rem;
+	color: green;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+	gap: 0.5rem;
+}
+
+/* Make checkbox/radio slightly larger for touch targets */
+input[type="checkbox"],
+input[type="radio"] {
+	width: 1rem;
+	height: 1rem;
+}
