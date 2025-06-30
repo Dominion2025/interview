@@ -98,12 +98,23 @@ form.addEventListener("submit", async (e) => {
 		const id = btoa(decodeURIComponent(encodeURIComponent(idSource))).replace(/=+$/, ''); // base64 encode, remove padding
 		const userRef = ref(db, `users/${id}`);
 		set(userRef, data);
+		document.getElementById('multiForm').style.display = 'none';
+		document.getElementById('confirmation').style.display = 'block';
 	} catch (error) {
 		alert("Error submitting form: " + error.message);
 	}
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+	document.getElementById('multiForm').style.display = 'none'; // Hide the form initially
+	document.getElementById('confirmation').style.display = 'none'; // Hide the form initially
+
+	document.getElementById('startBtn').addEventListener('click', function () {
+		document.getElementById('welcome').style.display = 'none';
+		document.getElementById('multiForm').style.display = 'block'; // Show the form
+	});
+
+	
 	const eduOtherInput = document.getElementById('education-other-input');
 	const eduFieldset = document.getElementById('education-fieldset') || form; // Use a fieldset if available, else form
 

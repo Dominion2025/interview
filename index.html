@@ -13,35 +13,59 @@
 
 <body>
 	<main class="container">
+		<div id="welcome">
+			<h2>Welcome to the Microsoft IYC 2025 Connection Form</h2>
+			<p>Thank you for your interest in connecting with Microsoft at the International Youth Convention (IYC)
+				2025! This form is your opportunity to engage with our team during the event—whether you're exploring a
+				career in cybersecurity with BAMSEC (Blacks at Microsoft - Security Engineering Community) or looking to
+				network with professionals across Microsoft's diverse range of disciplines.</p><br>
+			<p>We're excited to meet students, recent graduates, and early-career professionals who are passionate about
+				technology, leadership, innovation, and making a global impact.</p><br>
+			<p>Through this form, you can:</p>
+			<ul>
+				<li>Express interest in mentorship, career coaching, or technical interviews</li>
+				<li>Indicate availability for onsite conversations with BAMSEC or other Microsoft teams</li>
+				<li>Be considered for internship or full-time opportunities</li>
+				<li>Share your resume and background for future Microsoft talent engagement</li>
+			</ul><br>
+
+			<p>Whether you're interested in security, software engineering, AI, design, product management, or any other
+				area—we welcome your story and want to support your journey.</p><br>
+			<p>Please fill out the following sections to help us tailor your IYC experience. This should only take about
+				5-10 minutes.</p><br>
+			<p>Let's build the future together.</p>
+			<button id="startBtn">Start</button>
+		</div>
 		<form id="multiForm">
 			<!-- Section 1 -->
 			<section class="form-section active" id="section-1">
 				<h2>Personal Information</h2>
 				<p>First Name</p>
-				<input type="text" name="firstName" required />
+				<label><input type="text" name="firstName" required /></label>
 
 				<p>Last Name</p>
-				<input type="text" name="lastName" required />
+				<label><input type="text" name="lastName" required /></label>
 
 				<p>Preferred Name (optional)</p>
-				<input type="text" name="prefName" />
+				<label><input type="text" name="prefName" /></label>
 
 				<p>Email</p>
-				<input type="text" name="email" required />
+				<label><input type="text" name="email" required /></label>
 
 				<p>Phone Number</p>
-				<input type="text" name="phone" required />
+				<label><input type="text" name="phone" required /></label>
 
 				<p>Current Location (City, State/Country)</p>
-				<input type="text" name="location" required />
+				<label><input type="text" name="location" required /></label>
 
 				<p>LinkedIn Profile URL (optional)</p>
-				<input type="text" name="linkedin" />
+				<label><input type="text" name="linkedin" /></label>
 
 				<p>Are you a U.S. Citizen or Permanent Resident?</p>
 				<label><input type="radio" name="citizenship" value="Yes" required /> Yes</label>
 				<label><input type="radio" name="citizenship" value="No" /> No</label>
-				<label><input type="radio" name="citizenship" value="Prefer not to answer" /> Prefer not to answer</label>
+				<label><input type="radio" name="citizenship" value="Prefer not to answer" /> Prefer not to
+					answer</label>
 			</section>
 
 			<!-- Section 2 -->
@@ -57,23 +81,26 @@
 					<option value="Professional / Industry">Professional / Industry</option>
 					<option value="Other" id="education-other-radio">Other</option>
 				</select>
-				<input type="text" name="educationOther" id="education-other-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+				<label><input type="text" name="educationOther" id="education-other-input" placeholder="Please specify"
+					style="display:none; margin-left:10px;" /></label>
 
 				<p>School or University Name</p>
-				<input type="text" name="school" required />
+				<label><input type="text" name="school" required /></label>
 
 				<p>Major/Field of Study</p>
-				<input type="text" name="major" required />
+				<label><input type="text" name="major" required /></label>
 
 				<p>Graduation Date (MM/YYYY)</p>
-				<input type="text" name="gradDate" required />
+				<label><input type="text" name="gradDate" required /></label>
 
 				<p>Cumulative GPA (optional)</p>
-				<input type="text" name="gpa" />
+				<label><input type="text" name="gpa" /></label>
 
 				<p>Do you have any technical certifications? (e.g., Security+, Azure, AWS, CISSP)</p>
-				<label><input type="radio" name="certifications" value="Yes" id="certifications-yes-radio" required /> Yes</label>
-				<input type="text" name="certificationsYes" id="certifications-yes-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+				<label><input type="radio" name="certifications" value="Yes" id="certifications-yes-radio" required />
+					Yes</label>
+				<label><input type="text" name="certificationsYes" id="certifications-yes-input" placeholder="Please specify"
+					style="display:none; margin-left:10px;" /></label>
 				<label><input type="radio" name="certifications" value="No" required /> No</label>
 			</section>
 
@@ -81,44 +108,72 @@
 			<section class="form-section" id="section-3">
 				<h2>Career Interests</h2>
 				<p>What are you most interested in exploring with BAMSEC at IYC 2025? (Check all that apply)</p>
-				<label><input type="checkbox" name="careerInterests" value="Resume Review / Feedback" /> Resume Review / Feedback</label>
-				<label><input type="checkbox" name="careerInterests" value="1:1 Mentorship / Career Coaching" /> 1:1 Mentorship / Career Coaching</label>
-				<label><input type="checkbox" name="careerInterests" value="Internship Opportunities" /> Internship Opportunities</label>
-				<label><input type="checkbox" name="careerInterests" value="Full-Time Opportunities" /> Full-Time Opportunities</label>
-				<label><input type="checkbox" name="careerInterests" value="Onsite Interview" /> Onsite Interview</label>
-				<label><input type="checkbox" name="careerInterests" value="Networking with Security Professionals" /> Networking with Security Professionals</label>
-				<label><input type="checkbox" name="careerInterests" value="Learning about Microsoft Security Teams" /> Learning about Microsoft Security Teams</label>
-				<label><input type="checkbox" name="careerInterests" value="Other" id="career-interests-other-check" /> Other</label>
-				<input type="text" name="careerInterestsOther" id="career-interests-other-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
+				<label><input type="checkbox" name="careerInterests" value="Resume Review / Feedback" /> Resume Review /
+					Feedback</label>
+				<label><input type="checkbox" name="careerInterests" value="1:1 Mentorship / Career Coaching" /> 1:1
+					Mentorship / Career Coaching</label>
+				<label><input type="checkbox" name="careerInterests" value="Internship Opportunities" /> Internship
+					Opportunities</label>
+				<label><input type="checkbox" name="careerInterests" value="Full-Time Opportunities" /> Full-Time
+					Opportunities</label>
+				<label><input type="checkbox" name="careerInterests" value="Onsite Interview" /> Onsite
+					Interview</label>
+				<label><input type="checkbox" name="careerInterests" value="Networking with Security Professionals" />
+					Networking with Security Professionals</label>
+				<label><input type="checkbox" name="careerInterests" value="Learning about Microsoft Security Teams" />
+					Learning about Microsoft Security Teams</label>
+				<label><input type="checkbox" name="careerInterests" value="Other" id="career-interests-other-check" />
+					Other</label>
+				<input type="text" name="careerInterestsOther" id="career-interests-other-input"
+					placeholder="Please specify" style="display:none; margin-left:10px;" />
 
 				<p>What security-related roles are you most interested in? (Select all that apply)</p>
-				<label><input type="checkbox" name="securityInterests" value="Security Software Engineering / Feedback" /> Security Software Engineering / Feedback</label>
-				<label><input type="checkbox" name="securityInterests" value="Security Program Management" /> Security Program Management</label>
-				<label><input type="checkbox" name="securityInterests" value="Software Engineering" /> Software Engineering</label>
-				<label><input type="checkbox" name="securityInterests" value="Data Science / AI / Machine Learning" /> Data Science / AI / Machine Learning</label>
-				<label><input type="checkbox" name="securityInterests" value="Product Management" /> Product Management</label>
-				<label><input type="checkbox" name="securityInterests" value="UX / Product Design" /> UX / Product Design</label>
-				<label><input type="checkbox" name="securityInterests" value="Program / Project Management" /> Program / Project Management</label>
-				<label><input type="checkbox" name="securityInterests" value="Research (e.g., Microsoft Research)" /> Research (e.g., Microsoft Research)</label>
-				<label><input type="checkbox" name="securityInterests" value="Sales, Marketing, or Customer Success" /> Sales, Marketing, or Customer Success</label>
-				<label><input type="checkbox" name="securityInterests" value="Incident Response & Detection" /> Incident Response & Detection</label>
-				<label><input type="checkbox" name="securityInterests" value="Cloud/Infrastructure Security" /> Cloud/Infrastructure Security</label>
-				<label><input type="checkbox" name="securityInterests" value="Red Team / Pen Testing" /> Red Team / Pen Testing</label>
-				<label><input type="checkbox" name="securityInterests" value="Governance, Risk, and Compliance (GRC)" /> Governance, Risk, and Compliance (GRC)</label>
-				<label><input type="checkbox" name="securityInterests" value="Data & AI Security" /> Data & AI Security</label>
-				<label><input type="checkbox" name="securityInterests" value="Other" id="security-interests-other-check" /> Other</label>
-				<input type="text" name="securityInterestsOther" id="security-interests-other-input" placeholder="Please specify" style="display:none; margin-left:10px;" />
-				
+				<label><input type="checkbox" name="securityInterests"
+						value="Security Software Engineering / Feedback" /> Security Software Engineering /
+					Feedback</label>
+				<label><input type="checkbox" name="securityInterests" value="Security Program Management" /> Security
+					Program Management</label>
+				<label><input type="checkbox" name="securityInterests" value="Software Engineering" /> Software
+					Engineering</label>
+				<label><input type="checkbox" name="securityInterests" value="Data Science / AI / Machine Learning" />
+					Data Science / AI / Machine Learning</label>
+				<label><input type="checkbox" name="securityInterests" value="Product Management" /> Product
+					Management</label>
+				<label><input type="checkbox" name="securityInterests" value="UX / Product Design" /> UX / Product
+					Design</label>
+				<label><input type="checkbox" name="securityInterests" value="Program / Project Management" /> Program /
+					Project Management</label>
+				<label><input type="checkbox" name="securityInterests" value="Research (e.g., Microsoft Research)" />
+					Research (e.g., Microsoft Research)</label>
+				<label><input type="checkbox" name="securityInterests" value="Sales, Marketing, or Customer Success" />
+					Sales, Marketing, or Customer Success</label>
+				<label><input type="checkbox" name="securityInterests" value="Incident Response & Detection" /> Incident
+					Response & Detection</label>
+				<label><input type="checkbox" name="securityInterests" value="Cloud/Infrastructure Security" />
+					Cloud/Infrastructure Security</label>
+				<label><input type="checkbox" name="securityInterests" value="Red Team / Pen Testing" /> Red Team / Pen
+					Testing</label>
+				<label><input type="checkbox" name="securityInterests" value="Governance, Risk, and Compliance (GRC)" />
+					Governance, Risk, and Compliance (GRC)</label>
+				<label><input type="checkbox" name="securityInterests" value="Data & AI Security" /> Data & AI
+					Security</label>
+				<label><input type="checkbox" name="securityInterests" value="Other"
+						id="security-interests-other-check" /> Other</label>
+				<input type="text" name="securityInterestsOther" id="security-interests-other-input"
+					placeholder="Please specify" style="display:none; margin-left:10px;" />
+
 				<p>Have you previously applied to Microsoft?</p>
 				<label><input type="radio" name="msft" value="Yes" id="msft-yes-radio" required /> Yes</label>
-				<input type="text" name="msftYes" id="msft-yes-input" placeholder="Please specify role and year" style="display:none; margin-left:10px;" />
+				<input type="text" name="msftYes" id="msft-yes-input" placeholder="Please specify role and year"
+					style="display:none; margin-left:10px;" />
 				<label><input type="radio" name="msft" value="No" required /> No</label>
 
-				
+
 				<p>Are you currently open to relocation?</p>
 				<label><input type="radio" name="relocation" value="Yes" required /> Yes</label>
 				<label><input type="radio" name="relocation" value="No" /> No</label>
-				<label><input type="radio" name="relocation" value="Maybe / Depends on the opportunity" /> Maybe / Depends on the opportunity</label>
+				<label><input type="radio" name="relocation" value="Maybe / Depends on the opportunity" /> Maybe /
+					Depends on the opportunity</label>
 			</section>
 
 			<!-- Section 4 -->
@@ -127,9 +182,10 @@
 				<p>List 2-3 technical skills or tools you're most confident in.</p>
 				<label><input type="text" name="skills" required /></label>
 
-				
+
 				<p>Briefly describe a project, internship, or experience you're proud of: (Max 150 words)</p>
-				<textarea name="projectDescription" id="projectDescription" required rows="5" maxlength="1200" placeholder="Max 150 words"></textarea>
+				<label><textarea name="projectDescription" id="projectDescription" required rows="5" maxlength="1200"
+					placeholder="Max 150 words"></textarea></label>
 				<small id="word-count-msg" style="display:block; margin-bottom:10px;"></small>
 
 				<p>Link to Resume (PDF, Google Drive, or OneDrive URL): (Optional but highly encouraged)</p>
@@ -145,17 +201,21 @@
 				<label><input type="checkbox" name="availability" value="Saturday" /> Saturday</label>
 				<label><input type="checkbox" name="availability" value="Sunday" /> Sunday</label>
 
-				<p>Would you like to be considered for a same-day onsite interview with Microsoft during the convention?</p>
+				<p>Would you like to be considered for a same-day onsite interview with Microsoft during the convention?
+				</p>
 				<label><input type="radio" name="interview" value="Yes" required /> Yes</label>
 				<label><input type="radio" name="interview" value="No" /> No</label>
-				<label><input type="radio" name="interview" value="Maybe (I need more info)" /> Maybe (I need more info)</label>
+				<label><input type="radio" name="interview" value="Maybe (I need more info)" /> Maybe (I need more
+					info)</label>
 			</section>
 
 			<!-- Section 6 -->
 			<section class="form-section" id="section-6">
 				<h2>Final Thoughts</h2>
-				<p>What do you hope to get out of your interaction with BAMSEC at IYC 2025? (Optional, Max 100 words)</p>
-				<textarea name="finalThoughts" id="finalThoughts" rows="5" maxlength="100" placeholder="Max 100 words"></textarea>
+				<p>What do you hope to get out of your interaction with BAMSEC at IYC 2025? (Optional, Max 100 words)
+				</p>
+				<label><textarea name="finalThoughts" id="finalThoughts" rows="5" maxlength="100"
+					placeholder="Max 100 words"></textarea></label>
 				<small id="word-count-msg-thoughts" style="display:block; margin-bottom:10px;"></small>
 
 				<p>Any additional information we should know about you? (Optional)</p>
@@ -164,7 +224,10 @@
 				<button type="submit" class="submit">Submit</button>
 			</section>
 		</form>
-		<!-- <div id="confirmation" class="hidden">Form submitted successfully!</div> -->
+		<div id="confirmation">
+			<h2>Thank You!</h2>
+			<p>Your form has been successfully submitted. We look forward to connecting with you at IYC 2025!</p>
+		</div>
 	</main>
 </body>
 
